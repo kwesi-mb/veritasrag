@@ -1,0 +1,21 @@
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    container_name: veritasrag-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: veritasrag
+      POSTGRES_PASSWORD: veritasrag_dev
+      POSTGRES_DB: veritasrag
+    ports:
+      - "5434:5432"
+    volumes:
+      - veritasrag_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U veritasrag -d veritasrag"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  veritasrag_data:

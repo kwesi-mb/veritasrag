@@ -1,0 +1,15 @@
+fastapi[standard]
+sqlalchemy[asyncio]
+asyncpg
+alembic
+pgvector
+pydantic-settings
+python-multipart
+
+#Testing
+pytest
+pytest-asyncio
+httpx
+
+# Code quality
+ruff
