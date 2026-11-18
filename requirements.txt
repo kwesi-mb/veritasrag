@@ -5,6 +5,12 @@ alembic
 pgvector
 pydantic-settings
 python-multipart
+PyMuPDF
+python-docx
+python-magic
+transformers
+sentence-transformers
+tiktoken
 
 #Testing
 pytest
